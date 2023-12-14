@@ -15,5 +15,69 @@
 /* ******************************** */
 
 /* Colores */
+:root {
+  /* Mode 1 */
+  /* colors */
+  --background-body: #d4d4d4;
+  --background-container: #ffffff;
+  --boton-content: #13377d;
+  --boton-learn: #c85252;
+  --texto: #000000;
+  --titulo: #352e86;
+}
 
 /* ******************************** */
+body{
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  padding: 60px;
+  background-color: var(--background-body);
+}
+#container{
+  background-color: var(--background-container);
+  grid-column: 4/14;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border-radius: 30px;
+
+}
+.cabecera{
+  grid-column: 1/9;
+  grid-row: 1/4;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+.cabecera .imagen{
+  grid-column: 5/9;
+  grid-row: 1/8;
+  border-radius: 0 0 0 20px;
+}
+.cabecera .titulo{
+  grid-column: 2/span 3;
+  grid-row: 1/4;
+}
+.cabecera .steps{
+  grid-column: 2/span 3;
+  grid-row: 4/6;
+  align-self: center;
+}
+.cabecera .learn{
+  grid-column: 2/span 3;
+  grid-row: 7;
+  text-align: center;
+  background-color: var(--boton-learn);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 40px;
+}
+.cuerpo{
+  grid-column: 1/9;
+  grid-row: 5/7;
+}
+.pie{
+  grid-column: 1/9;
+  grid-row: 8/10;
+}
